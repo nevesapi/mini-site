@@ -1,0 +1,16 @@
+/* Reset de estilos - Estamos removendo todos os estilos padrões do navegador */
+
+/* seletor global - Ou seja, todos os elementos da nossa estrutura receberam essas configurações */
+* {
+  margin: 0;
+  padding: 0;
+
+  /* none - nenhum */
+  text-decoration: none;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: rgb(27, 27, 27);
+  color: #fafafa;
+}
