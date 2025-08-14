@@ -4,6 +4,9 @@
 * {
   margin: 0;
   padding: 0;
+  /* tamanho da caixa */
+  /* tamanho total do elemento = contéudo + padding + border */
+  box-sizing: border-box;
 
   /* none - nenhum */
   text-decoration: none;
@@ -18,6 +21,11 @@ body {
   color: #fafafa;
 
   height: 2000px;
+}
+
+/* Impede que a imagem ultrapasse a largura do seu contêiner */
+img {
+  max-width: 100%;
 }
 
 header {
@@ -54,16 +62,19 @@ header {
   align-items: center;
 
   height: 60px;
-
-  padding: 0 10px;
 }
 
 .container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.ajuste-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
 }
 
 header a {
@@ -75,4 +86,86 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   gap: 10px;
+}
+
+li {
+  padding: 5px 10px;
+  border: 2px solid transparent;
+}
+
+li:hover {
+  background-color: #4e4e4e;
+  border-radius: 5px 15px;
+}
+
+li:hover a {
+  color: aqua;
+}
+
+.main section {
+  background-color: #333131;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ffffff22;
+}
+
+section h2 {
+  margin-bottom: 16px;
+
+  /* root em - tamanho da fonte do elemento raiz */
+  /* 1rem = 16px */
+  font-size: 2rem;
+}
+
+section p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 150%;
+
+  /* line-height = 18px * 1.5 */
+  /* 27px */
+}
+
+section a {
+  /* background-color = muda a cor de fundo do elemento */
+  background-color: #da3ebd;
+
+  /* muda a cor do texto */
+  color: #fafafa;
+
+  /* font-size = tamanho da fonte */
+  font-size: 18px;
+
+  /* Espessura da fonte */
+  font-weight: 600;
+
+  /* alinhamento de texto ao centro */
+  text-align: center;
+
+  /* widht(largura) = aplicamos 100% para garantir que o elemento ocupe toda a largura disponivel*/
+  width: 100%;
+
+  /* converter a apresentação padrão do elemento(que é inline) para inline-block 
+  ele ainda vai se comportar como um elemento inline, porém vai ser capaz de receber propriedades de elementos de bloco, como largura(widht), altura(height), preenchimento(padding)
+  */
+  display: inline-block;
+
+  /* cria um espaçamento(margin) na parte superior(top) */
+  margin-top: 10px;
+
+  /* aplica um preenchimento na parte superior e inferior e mantem as laterais sem preenchimento*/
+  padding: 10px 0;
+
+  /* configuração para arredondamento de bordas */
+  border-radius: 6px;
+}
+
+/* aplicando pseudo-classe do tipo hover, isso faz com que o elemento sofra uma alteração quando o cursor do mouse passar por cima do elemento a */
+section a:hover {
+  background-color: #942a81;
+}
+
+footer img {
+  width: 30px;
 }
