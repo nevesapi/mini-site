@@ -27,7 +27,8 @@ img {
 }
 
 a,
-li {
+li,
+button {
   /* transition: background-color 400ms ease 1s; */
 
   /* transition: background-color 400ms ease, color 500ms ease-in; */
@@ -106,7 +107,7 @@ li:hover {
 }
 
 li:hover a {
-  color: aqua;
+  color: #da3ebd;
 }
 
 .main section {
@@ -214,4 +215,63 @@ article {
 
 article h3 {
   margin-bottom: 5px;
+}
+/* Fim da estilização da sobre.html */
+
+/* Inicio da estilização da contato.html */
+.contato {
+  /* d(dinamyc - Dinâmica(o)) v(viewport - visualização) h(height - altura) */
+  height: 100dvh;
+}
+
+form,
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  background-color: #212121;
+  border-radius: 6px;
+  padding: 12px;
+
+  gap: 1rem;
+}
+
+form div {
+  gap: 0.125rem;
+}
+
+form label {
+  font-size: 1.125rem;
+}
+
+form input {
+  height: 2rem;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #0000003d;
+}
+
+form button {
+  height: 2rem;
+  border-radius: 4px;
+  border: none;
+  background: linear-gradient(
+    160deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  color: #fafafa;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: linear-gradient(
+    160deg,
+    rgb(53, 79, 211) 0%,
+    rgb(196, 52, 81) 100%
+  );
 }
