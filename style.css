@@ -24,6 +24,7 @@ body {
 /* Impede que a imagem ultrapasse a largura do seu contêiner */
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 a,
@@ -51,9 +52,6 @@ header {
   position: sticky;
 
   top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
 
   /*comportamento padrão do display: flex; = row (linha) */
   display: flex;
@@ -110,7 +108,14 @@ li:hover a {
   color: #da3ebd;
 }
 
+.index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .main section {
+  flex: 1 320px;
   background-color: #333131;
   margin-top: 10px;
   padding: 8px;
@@ -208,6 +213,8 @@ footer a:first-of-type {
 /* Inicio da estilização da sobre.html */
 .sobre section img {
   border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
 }
 article {
   margin-top: 15px;
@@ -275,3 +282,30 @@ form button:hover {
     rgb(196, 52, 81) 100%
   );
 }
+
+/* 
+@media (condição){
+  seletor{
+    propriedade: valor;
+  }
+} 
+*/
+
+/* aplica as config de media, desde que tenha uma tela E a largura minina seja de 500px */
+
+@media (min-width: 957px) {
+  body {
+    background-color: #942a81;
+  }
+
+  .sobre {
+    height: 80dvh;
+  }
+
+  .sobre-conteudo {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+
